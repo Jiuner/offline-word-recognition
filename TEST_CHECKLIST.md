@@ -1,0 +1,28 @@
+# MVP Acceptance Checklist
+
+- [x] Project shell and navigation structure
+- [x] 12-word local starter dataset
+- [x] Local real-photo assets and local MP3 audio
+- [x] IndexedDB schema and persistence API
+- [x] Home statistics count unique learned words
+- [x] Today's Plan generates new + due review words
+- [x] Listen & Find randomizes text order
+- [x] Break & Blend supports `gar | den` and local chunk audio
+- [x] Fix the Word varies missing-letter positions
+- [x] Word & Picture rotates local real photos and randomizes option order
+- [x] Build the Word creates N blank slots and shuffled letter tiles
+- [x] Build the Word supports duplicate letters by unique tile IDs
+- [x] Word Hunt target has the same visual style as other tokens
+- [x] New words run all six games
+- [x] Review words can run an adaptive 2–3 game subset
+- [x] Mastery requires evidence from different dates
+- [x] Review intervals use 1 / 3 / 7 / 14 / 30 days
+- [x] My Words separates Learning / Mastered / Review
+- [x] Parent area includes records, word library and learning settings
+- [x] Backup exports versioned JSON
+- [x] Restore validates and previews before explicit confirmation
+- [x] PWA service worker precaches core files, images and audio
+- [x] 320px/iPhone/tablet responsive CSS constraints
+- [x] No runtime dependency on external URLs
+- [x] Local HTTP asset smoke test
+- [x] Full automated test suite passes

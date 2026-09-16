@@ -1,0 +1,389 @@
+
+> offline-word-recognition@1.0.0 test:all
+> npm test && npm run test:smoke
+
+
+> offline-word-recognition@1.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: phase 0 project shell has required files
+ok 1 - phase 0 project shell has required files
+  ---
+  duration_ms: 1.481767
+  type: 'test'
+  ...
+# Subtest: index has app mount and responsive viewport
+ok 2 - index has app mount and responsive viewport
+  ---
+  duration_ms: 0.477226
+  type: 'test'
+  ...
+# Subtest: router defines required routes
+ok 3 - router defines required routes
+  ---
+  duration_ms: 0.584075
+  type: 'test'
+  ...
+# Subtest: phase 1 has 10-20 starter words and valid schema
+ok 4 - phase 1 has 10-20 starter words and valid schema
+  ---
+  duration_ms: 3.267781
+  type: 'test'
+  ...
+# Subtest: all declared local assets exist
+ok 5 - all declared local assets exist
+  ---
+  duration_ms: 2.134679
+  type: 'test'
+  ...
+# Subtest: garden has multiple real-photo assets and expected chunks
+ok 6 - garden has multiple real-photo assets and expected chunks
+  ---
+  duration_ms: 1.285725
+  type: 'test'
+  ...
+# Subtest: audio assets are non-empty mp3 files
+ok 7 - audio assets are non-empty mp3 files
+  ---
+  duration_ms: 0.885439
+  type: 'test'
+  ...
+# Subtest: phase 2 IndexedDB schema declares required stores
+ok 8 - phase 2 IndexedDB schema declares required stores
+  ---
+  duration_ms: 1.011697
+  type: 'test'
+  ...
+# Subtest: db API persists settings, progress and attempts through adapter contract
+ok 9 - db API persists settings, progress and attempts through adapter contract
+  ---
+  duration_ms: 3.305839
+  type: 'test'
+  ...
+# Subtest: all stores can be cleared without deleting schema
+ok 10 - all stores can be cleared without deleting schema
+  ---
+  duration_ms: 1.361867
+  type: 'test'
+  ...
+# Subtest: phase 3 home summary counts unique word rows by state
+ok 11 - phase 3 home summary counts unique word rows by state
+  ---
+  duration_ms: 1.346908
+  type: 'test'
+  ...
+# Subtest: repeated attempts do not inflate learned count because summary is per wordProgress row
+ok 12 - repeated attempts do not inflate learned count because summary is per wordProgress row
+  ---
+  duration_ms: 0.188073
+  type: 'test'
+  ...
+# Subtest: phase 4 today plan schedules due reviews before new words and respects caps
+ok 13 - phase 4 today plan schedules due reviews before new words and respects caps
+  ---
+  duration_ms: 14.15911
+  type: 'test'
+  ...
+# Subtest: mastered words are not added to review
+ok 14 - mastered words are not added to review
+  ---
+  duration_ms: 0.642917
+  type: 'test'
+  ...
+# Subtest: phase 5 listen/find always contains target plus exactly two distractors
+ok 15 - phase 5 listen/find always contains target plus exactly two distractors
+  ---
+  duration_ms: 2.595984
+  type: 'test'
+  ...
+# Subtest: answer position varies across repeated randomized rounds
+ok 16 - answer position varies across repeated randomized rounds
+  ---
+  duration_ms: 1.358653
+  type: 'test'
+  ...
+# Subtest: evaluation only accepts target
+ok 17 - evaluation only accepts target
+  ---
+  duration_ms: 0.201154
+  type: 'test'
+  ...
+# Subtest: phase 6 garden is segmented as gar | den and maps one local audio per chunk
+ok 18 - phase 6 garden is segmented as gar | den and maps one local audio per chunk
+  ---
+  duration_ms: 1.245783
+  type: 'test'
+  ...
+# Subtest: chunk/audio mismatch is rejected
+ok 19 - chunk/audio mismatch is rejected
+  ---
+  duration_ms: 0.457012
+  type: 'test'
+  ...
+# Subtest: phase 7 garden can test every letter position across six rounds
+ok 20 - phase 7 garden can test every letter position across six rounds
+  ---
+  duration_ms: 5.437986
+  type: 'test'
+  ...
+# Subtest: fix evaluation rejects wrong letter
+ok 21 - fix evaluation rejects wrong letter
+  ---
+  duration_ms: 0.376137
+  type: 'test'
+  ...
+# Subtest: phase 8 image rotation uses every image before repeating and never immediate-repeats across pool reset
+ok 22 - phase 8 image rotation uses every image before repeating and never immediate-repeats across pool reset
+  ---
+  duration_ms: 1.519218
+  type: 'test'
+  ...
+# Subtest: word-to-picture target position varies and always has two distractors
+ok 23 - word-to-picture target position varies and always has two distractors
+  ---
+  duration_ms: 3.192499
+  type: 'test'
+  ...
+# Subtest: picture-to-word target position varies
+ok 24 - picture-to-word target position varies
+  ---
+  duration_ms: 0.616092
+  type: 'test'
+  ...
+# Subtest: phase 9 garden creates six empty slots and six shuffled unique tile identities
+ok 25 - phase 9 garden creates six empty slots and six shuffled unique tile identities
+  ---
+  duration_ms: 0.869359
+  type: 'test'
+  ...
+# Subtest: build supports duplicate letters using distinct tile IDs
+ok 26 - build supports duplicate letters using distinct tile IDs
+  ---
+  duration_ms: 2.308556
+  type: 'test'
+  ...
+# Subtest: placing, removing, undo, reset and checking work
+ok 27 - placing, removing, undo, reset and checking work
+  ---
+  duration_ms: 0.72279
+  type: 'test'
+  ...
+# Subtest: phase 10 word hunt finds garden in ordinary sentence
+ok 28 - phase 10 word hunt finds garden in ordinary sentence
+  ---
+  duration_ms: 2.064314
+  type: 'test'
+  ...
+# Subtest: tokenizer preserves punctuation separately from clickable words
+ok 29 - tokenizer preserves punctuation separately from clickable words
+  ---
+  duration_ms: 1.033402
+  type: 'test'
+  ...
+# Subtest: target is not rendered with target-specific highlight classes or inline styles
+ok 30 - target is not rendered with target-specific highlight classes or inline styles
+  ---
+  duration_ms: 1.055386
+  type: 'test'
+  ...
+# Subtest: phase 11 new word receives all six games in required order
+ok 31 - phase 11 new word receives all six games in required order
+  ---
+  duration_ms: 2.117408
+  type: 'test'
+  ...
+# Subtest: session controller advances deterministically and completes
+ok 32 - session controller advances deterministically and completes
+  ---
+  duration_ms: 0.369691
+  type: 'test'
+  ...
+# Subtest: review game selector can provide subset without changing controller
+ok 33 - review game selector can provide subset without changing controller
+  ---
+  duration_ms: 0.408835
+  type: 'test'
+  ...
+# Subtest: phase 12 completing games on one day does not mark mastered
+ok 34 - phase 12 completing games on one day does not mark mastered
+  ---
+  duration_ms: 1.012434
+  type: 'test'
+  ...
+# Subtest: mastery requires correct evidence on different dates plus key recognition games
+ok 35 - mastery requires correct evidence on different dates plus key recognition games
+  ---
+  duration_ms: 0.279474
+  type: 'test'
+  ...
+# Subtest: unlearned stays level zero
+ok 36 - unlearned stays level zero
+  ---
+  duration_ms: 2.073791
+  type: 'test'
+  ...
+# Subtest: phase 13 review intervals are 1,3,7,14,30 days
+ok 37 - phase 13 review intervals are 1,3,7,14,30 days
+  ---
+  duration_ms: 1.237316
+  type: 'test'
+  ...
+# Subtest: successful reviews advance interval and failure returns to next-day review
+ok 38 - successful reviews advance interval and failure returns to next-day review
+  ---
+  duration_ms: 0.537351
+  type: 'test'
+  ...
+# Subtest: adaptive selector picks weakest games and includes Word Hunt in a three-game review
+ok 39 - adaptive selector picks weakest games and includes Word Hunt in a three-game review
+  ---
+  duration_ms: 0.326813
+  type: 'test'
+  ...
+# Subtest: phase 14 My Words separates learning, mastered and review
+ok 40 - phase 14 My Words separates learning, mastered and review
+  ---
+  duration_ms: 1.920158
+  type: 'test'
+  ...
+# Subtest: phase 15 parent settings clamp unsafe values
+ok 41 - phase 15 parent settings clamp unsafe values
+  ---
+  duration_ms: 1.697416
+  type: 'test'
+  ...
+# Subtest: settings enforce at least one review item and maximum 20 new words
+ok 42 - settings enforce at least one review item and maximum 20 new words
+  ---
+  duration_ms: 0.232196
+  type: 'test'
+  ...
+# Subtest: phase 16 backup contains learning data, settings, metadata and version info
+ok 43 - phase 16 backup contains learning data, settings, metadata and version info
+  ---
+  duration_ms: 1.59512
+  type: 'test'
+  ...
+# Subtest: phase 17 preview validates and reports backup without mutating current DB
+ok 44 - phase 17 preview validates and reports backup without mutating current DB
+  ---
+  duration_ms: 2.411064
+  type: 'test'
+  ...
+# Subtest: confirmed restore replaces current data
+ok 45 - confirmed restore replaces current data
+  ---
+  duration_ms: 0.624319
+  type: 'test'
+  ...
+# Subtest: invalid backup is rejected before DB writes
+ok 46 - invalid backup is rejected before DB writes
+  ---
+  duration_ms: 0.51661
+  type: 'test'
+  ...
+# Subtest: phase 18 manifest is installable and all app URLs are local
+ok 47 - phase 18 manifest is installable and all app URLs are local
+  ---
+  duration_ms: 1.443975
+  type: 'test'
+  ...
+# Subtest: service worker install caches core plus every local image/audio asset
+ok 48 - service worker install caches core plus every local image/audio asset
+  ---
+  duration_ms: 3.821264
+  type: 'test'
+  ...
+# Subtest: all cached word assets exist physically
+ok 49 - all cached word assets exist physically
+  ---
+  duration_ms: 2.123022
+  type: 'test'
+  ...
+# Subtest: phase 19 viewport and narrow-screen media rules support 320px phones
+ok 50 - phase 19 viewport and narrow-screen media rules support 320px phones
+  ---
+  duration_ms: 0.829138
+  type: 'test'
+  ...
+# Subtest: primary child controls meet roughly 44px touch-target minimum
+ok 51 - primary child controls meet roughly 44px touch-target minimum
+  ---
+  duration_ms: 0.29451
+  type: 'test'
+  ...
+# Subtest: parent inputs use at least 16px font size to avoid mobile zoom
+ok 52 - parent inputs use at least 16px font size to avoid mobile zoom
+  ---
+  duration_ms: 0.133665
+  type: 'test'
+  ...
+# Subtest: phase 20 Listen & Find distributes correct answer across all three positions over 100 deterministic seeds
+ok 53 - phase 20 Listen & Find distributes correct answer across all three positions over 100 deterministic seeds
+  ---
+  duration_ms: 1.416824
+  type: 'test'
+  ...
+# Subtest: Word & Picture rotation covers all garden photos over 20 draws without immediate repeats
+ok 54 - Word & Picture rotation covers all garden photos over 20 draws without immediate repeats
+  ---
+  duration_ms: 1.308721
+  type: 'test'
+  ...
+# Subtest: Word & Picture answer positions vary over repeated launches
+ok 55 - Word & Picture answer positions vary over repeated launches
+  ---
+  duration_ms: 1.893778
+  type: 'test'
+  ...
+# Subtest: Build the Word produces multiple letter orders instead of one memorized layout
+ok 56 - Build the Word produces multiple letter orders instead of one memorized layout
+  ---
+  duration_ms: 0.638245
+  type: 'test'
+  ...
+# Subtest: phase 21 child game source contains no CJK instructional text
+ok 57 - phase 21 child game source contains no CJK instructional text
+  ---
+  duration_ms: 1.456227
+  type: 'test'
+  ...
+# Subtest: session shell does not reveal target word before games that test recognition/spelling
+ok 58 - session shell does not reveal target word before games that test recognition/spelling
+  ---
+  duration_ms: 0.27792
+  type: 'test'
+  ...
+# Subtest: core learning evidence is one learned word even after many attempts and needs multi-date evidence for mastery
+ok 59 - core learning evidence is one learned word even after many attempts and needs multi-date evidence for mastery
+  ---
+  duration_ms: 0.672674
+  type: 'test'
+  ...
+# Subtest: valid restore changes data only when restore function is explicitly invoked
+ok 60 - valid restore changes data only when restore function is explicitly invoked
+  ---
+  duration_ms: 1.728682
+  type: 'test'
+  ...
+# Subtest: project has no remote runtime URLs in app code/assets
+ok 61 - project has no remote runtime URLs in app code/assets
+  ---
+  duration_ms: 2.310713
+  type: 'test'
+  ...
+1..61
+# tests 61
+# suites 0
+# pass 61
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 592.446626
+
+> offline-word-recognition@1.0.0 test:smoke
+> bash scripts/http_smoke.sh
+
+HTTP_SMOKE_PASS
