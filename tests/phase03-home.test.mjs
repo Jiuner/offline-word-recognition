@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {summarizeProgress} from '../js/stats.js';
+test('phase 3 home summary counts unique word rows by state',()=>{const s=summarizeProgress([{wordId:'garden',learned:true,status:'learning',mastered:false},{wordId:'cat',learned:true,status:'mastered',mastered:true},{wordId:'lion',learned:true,status:'review',mastered:false},{wordId:'new',learned:false,status:'unlearned',mastered:false}]);assert.deepEqual(s,{learned:3,mastered:1,learning:1,review:1});});
+test('repeated attempts do not inflate learned count because summary is per wordProgress row',()=>{const s=summarizeProgress([{wordId:'garden',learned:true,status:'learning',correctCount:30,mastered:false}]);assert.equal(s.learned,1);});

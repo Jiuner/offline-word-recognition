@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {createBreakBlendRound} from '../games/break-blend.js';
+test('phase 6 garden is segmented as gar | den and maps one local audio per chunk',()=>{const r=createBreakBlendRound({word:'garden',chunks:['gar','den'],audioPath:'audio/words/garden.mp3',chunkAudioPaths:['audio/chunks/garden_1.mp3','audio/chunks/garden_2.mp3']});assert.equal(r.word,'garden');assert.deepEqual(r.chunks.map(c=>c.text),['gar','den']);assert.equal(r.chunks.length,2);assert.ok(r.chunks.every(c=>c.audioPath.endsWith('.mp3')));});
+test('chunk/audio mismatch is rejected',()=>{assert.throws(()=>createBreakBlendRound({word:'garden',chunks:['gar','den'],chunkAudioPaths:['x.mp3'],audioPath:'g.mp3'}),/mismatch/);});

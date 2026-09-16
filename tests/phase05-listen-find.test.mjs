@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {createListenFindRound,evaluateListenFind} from '../games/listen-find.js';import {createSeededRandom} from '../js/random.js';
+const word={id:'garden',word:'garden',audioPath:'audio/words/garden.mp3',distractors:['green','game','tower','lion']};
+test('phase 5 listen/find always contains target plus exactly two distractors',()=>{for(let i=1;i<=20;i++){const r=createListenFindRound(word,createSeededRandom(i));assert.equal(r.options.length,3);assert.ok(r.options.includes('garden'));assert.equal(new Set(r.options).size,3);}});
+test('answer position varies across repeated randomized rounds',()=>{const positions=new Set();for(let i=1;i<=50;i++){const r=createListenFindRound(word,createSeededRandom(i));positions.add(r.options.indexOf('garden'));}assert.deepEqual([...positions].sort(),[0,1,2]);});
+test('evaluation only accepts target',()=>{const r=createListenFindRound(word,createSeededRandom(7));assert.equal(evaluateListenFind(r,'garden'),true);assert.equal(evaluateListenFind(r,'green'),false);});

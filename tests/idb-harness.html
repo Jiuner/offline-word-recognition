@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><body data-test-status="running"><pre id="out">running</pre><script type="module">
+import {clearAll,ensureDefaults,upsertWordProgress,recordAttempt,get,getAll,getSettings} from '../js/db.js';
+const body=document.body,out=document.querySelector('#out');
+try{
+ await clearAll();await ensureDefaults();
+ await upsertWordProgress('garden',{status:'learning',learned:true,masteryLevel:1});
+ await recordAttempt({wordId:'garden',gameType:'listenFind',correct:true,responseTimeMs:1234});
+ const wp=await get('wordProgress','garden');const hist=await getAll('reviewHistory');const settings=await getSettings();
+ if(!wp||wp.correctCount!==1||hist.length!==1||settings.dailyNewWords!==5) throw new Error(JSON.stringify({wp,hist,settings}));
+ body.dataset.testStatus='pass';out.textContent='PASS';
+}catch(e){body.dataset.testStatus='fail';out.textContent='FAIL '+(e?.stack||e);}
+</script></body>
